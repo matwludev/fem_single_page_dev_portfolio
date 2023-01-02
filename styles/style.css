@@ -8,10 +8,7 @@
     --aboutText-color:hsl(0, 0%, 100%);
     font-size: 10px;
 }
-html {
-    position: relative;
-    overflow: hidden;
-}
+
 *{
     margin: 0;
     padding: 0;
@@ -20,11 +17,10 @@ html {
 }
 
 body {
-    position: relative;
     width: 100vw;
     height: 100%;
     background-color: var(--bg-color);
-    overflow: hidden;
+
 }
 
 header, .about {
@@ -51,14 +47,22 @@ header .header_mediaList {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
 }
 .about {
     position: relative;
     display: flex;
-    margin: 0 1rem;
     color: var(--aboutText-color);
-    border-bottom: .1rem solid var(--aboutBorder-color);
+    overflow: hidden;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.about::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1rem;
+    background-color: var(--aboutBorder-color);
 }
 .about .about_photo {
     width: 17rem;
@@ -71,7 +75,7 @@ header .header_mediaList {
     right: 50%;
     z-index: -1;
 }
-.about_circlePattern {
+.about .about_circlePattern {
     position: absolute;
     top: 25rem;
     right: -6.5rem;
@@ -86,7 +90,19 @@ header .header_mediaList {
 }
 
 .about .about_titleParagraph span {
-    border-bottom: .5rem solid var(--aboutTitleBorder-color);
+    position: relative;
+    display: inline-block;
+}
+
+.about .about_titleParagraph span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: -.5rem;
+    width: 100%;
+    height: .5rem;
+    background-color: var(--aboutTitleBorder-color);
 }
 
 .about .about_descriptionParagraph {
