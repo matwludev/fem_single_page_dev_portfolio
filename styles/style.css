@@ -7,6 +7,8 @@
     --aboutBorder-color:hsl(0, 0%, 100%);
     --aboutText-color:hsl(0, 0%, 100%);
     --knowledgeText-color:hsl(0, 0%, 100%);
+    --projectsText-color:hsl(0, 0%, 100%);
+    --projectsTechText-color:hsl(0, 0%, 85%);
     font-size: 10px;
 }
 
@@ -105,13 +107,13 @@ header .header_mediaList {
     text-align: center;
     margin-bottom: 2.4rem;
 }
-.contactButton {
+.contactButton, .projects .projectBox .projectBox_links a {
     color: var(--contactButtonText-color);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-size: 1.6rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
     margin-bottom: 8rem;
     font-weight: 700;
     border-bottom: .2rem solid var(--contactButtonBorder-color);
@@ -126,7 +128,7 @@ header .header_mediaList {
     justify-content: center;
     align-items: center;
     color: var(--knowledgeText-color);
-    overflow: hidden;
+    margin-bottom: 8rem;
 }
 
 .knowledge::after, .knowledge::before {
@@ -171,4 +173,65 @@ header .header_mediaList {
     position: absolute; 
     bottom: -6.5rem;
     left: 50%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1.6rem;
+}
+
+.projects .projectsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects .projectsHeader h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--projectsText-color);
+}
+.projects .projectsHeader .contactButton {
+    margin-bottom: 0;
+}
+
+.projects .projectBox:last-child {
+    margin-bottom: 8rem;
+}
+.projects .projectBox img {
+    display: inline-block;
+    width: 100%;
+    object-fit: contain;
+    margin: 4rem auto;
+}
+
+.projects .projectBox .projectBox_projectName {
+    color: var(--projectsText-color);
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+}
+
+.projects .projectBox .projectBox_tech {
+    display:  flex;
+    margin-top: 1rem;
+}
+
+.projects .projectBox .projectBox_tech .projectBox_projectTechText {
+    color: var(--projectsTechText-color);
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+    margin-right: 1.8rem;
+}
+
+.projects .projectBox .projectBox_links {
+    margin-top: 2rem;
+}
+
+.projects .projectBox .projectBox_links a{
+    margin-right: 3rem;
 }
