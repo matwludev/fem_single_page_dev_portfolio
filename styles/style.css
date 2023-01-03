@@ -6,6 +6,7 @@
     --aboutTitleBorder-color: hsl(153, 71%, 59%);
     --aboutBorder-color:hsl(0, 0%, 100%);
     --aboutText-color:hsl(0, 0%, 100%);
+    --knowledgeText-color:hsl(0, 0%, 100%);
     font-size: 10px;
 }
 
@@ -50,20 +51,12 @@ header .header_mediaList {
 }
 .about {
     position: relative;
-    display: flex;
     color: var(--aboutText-color);
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0 1.6rem;
     width: 100%;
 }
 
-.about::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: .1rem;
-    background-color: var(--aboutBorder-color);
-}
 .about .about_photo {
     width: 17rem;
     height: 38rem;
@@ -122,4 +115,60 @@ header .header_mediaList {
     margin-bottom: 8rem;
     font-weight: 700;
     border-bottom: .2rem solid var(--contactButtonBorder-color);
+}
+
+.knowledge {
+    position: relative;
+    width: 100%;
+    padding: 0 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--knowledgeText-color);
+    overflow: hidden;
+}
+
+.knowledge::after, .knowledge::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1rem;
+    background-color: var(--aboutBorder-color);
+}
+
+.knowledge .knowledgeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2.4rem auto;
+}
+
+.knowledge .knowledgeBox:first-child {
+    margin-top: 4rem;
+}
+.knowledge .knowledgeBox:last-child {
+    margin-bottom: 4rem;
+}
+
+.knowledge .knowledgeBox [class^="knowledgeBox_header"] {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    font-weight: 700;
+}
+.knowledge .knowledgeBox [class^="knowledgeBox_paragraph"] {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+}
+
+.knowledge .knowledgeBox:nth-child(1) h1, .knowledge .knowledgeBox:nth-child(2) h1{
+    text-transform: uppercase;
+}
+
+.knowledge .knowledge_ringsPattern {
+    position: absolute; 
+    bottom: -6.5rem;
+    left: 50%;
 }
