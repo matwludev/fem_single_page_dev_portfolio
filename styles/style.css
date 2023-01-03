@@ -9,6 +9,11 @@
     --knowledgeText-color:hsl(0, 0%, 100%);
     --projectsText-color:hsl(0, 0%, 100%);
     --projectsTechText-color:hsl(0, 0%, 85%);
+    --contactBg-color: hsl(0, 0%, 14%);
+    --contactText-color:hsl(0, 0%, 100%);
+    --contactParagraphText-color:hsl(0, 0%, 85%);
+    --footertBg-color: hsl(0, 0%, 14%);
+    --footerText-color:hsl(0, 0%, 100%);
     font-size: 10px;
 }
 
@@ -26,27 +31,27 @@ body {
 
 }
 
-header, .about {
+header, .about, footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-header {
+header{
     position: absolute;
     width: 17rem;
     left: calc(50% - 8.5rem);
     color: var(--headerText-color);
 }
 
-header .header_title {
+header .header_title, footer .header_title {
     font-size: 2.4rem;
     font-weight: 700;
     margin: 2rem auto;
 }
 
-header .header_mediaList {
+header .header_mediaList{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -107,7 +112,7 @@ header .header_mediaList {
     text-align: center;
     margin-bottom: 2.4rem;
 }
-.contactButton, .projects .projectBox .projectBox_links a {
+.contactButton, .projects .projectBox .projectBox_links a, .contact .contactForm .contactForm_sendBtn {
     color: var(--contactButtonText-color);
     text-decoration: none;
     text-transform: uppercase;
@@ -128,7 +133,8 @@ header .header_mediaList {
     justify-content: center;
     align-items: center;
     color: var(--knowledgeText-color);
-    margin-bottom: 8rem;
+    padding-bottom: 8rem;
+    overflow: hidden;
 }
 
 .knowledge::after, .knowledge::before {
@@ -169,9 +175,9 @@ header .header_mediaList {
     text-transform: uppercase;
 }
 
-.knowledge .knowledge_ringsPattern {
+.knowledge img {
     position: absolute; 
-    bottom: -6.5rem;
+    bottom: 1.5rem;
     left: 50%;
 }
 
@@ -234,4 +240,65 @@ header .header_mediaList {
 
 .projects .projectBox .projectBox_links a{
     margin-right: 3rem;
+}
+
+.contact {
+    position: relative;
+    padding: 6rem 1.6rem 0 1.6rem;
+    background-color: var(--contactBg-color);
+    overflow-y: hidden;
+}
+
+.contact::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1rem;
+    background-color: var(--aboutBorder-color);
+}
+.contact .contactText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--contactText-color);
+}
+.contact .contactText h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact .contactText .contactText_paragraph {
+    color: var(--contactParagraphText-color);
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.contact .contactForm .contactForm_sendBtn {
+    background: none;
+    border: none;
+    border-bottom: .2rem solid var(--contactButtonBorder-color);
+}
+
+.contact img {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+}
+
+footer {
+    position: relative;
+    background-color: var(--footertBg-color);
+    width: 100%;
+    color: var(--footerText-color);
+    padding: 2rem 0 4rem 0;
+}
+
+footer a {
+    margin-right: 2.6rem;
 }
