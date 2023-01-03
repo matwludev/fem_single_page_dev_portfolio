@@ -143,9 +143,20 @@
             <p class="contactText_paragraph">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
         </div>
         <div class="contactForm">
-            <input type="text" placeholder="name">
-            <input type="email" placeholder="email">
-            <input type="text" placeholder="message">
+            <div class="contactForm_wrap">
+                <label for="text">name</label>
+                <input type="text" name="text">
+            </div>
+            <div class="contactForm_wrap">
+                <label for="email">email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="contactForm_wrap">
+                <label for="message">message</label>
+                <textarea name="message" cols="35" rows="10"></textarea>
+            </div>
+            
+            
             <button class="contactForm_sendBtn">send message</button>
         </div>
         <img src="./assets/images/pattern-rings.svg" alt="rings pattern" class="contact_ringsPattern">
