@@ -13,6 +13,9 @@
     --contactText-color:hsl(0, 0%, 100%);
     --contactParagraphText-color:hsl(0, 0%, 85%);
     --contactInputText-color:hsl(0, 0%, 85%);
+    --contactFocusBorder-color: hsl(153, 71%, 59%);
+    --contactErrorText-color: hsl(7, 100%, 68%);
+    --contactErrorBorder-color: hsl(7, 100%, 68%);
     --footertBg-color: hsl(0, 0%, 14%);
     --footerText-color:hsl(0, 0%, 100%);
     font-size: 10px;
@@ -280,16 +283,17 @@ header .header_mediaList{
     margin-bottom: 5rem;
 }
 
-.contact .contactForm {
+.contact .contactForm form {
     display: flex;
     flex-direction: column;
 }
 
-.contact .contactForm .contactForm_wrap {
+.contact .contactForm form .contactForm_wrap {
     position: relative;
 }
 
-.contact .contactForm .contactForm_wrap input {
+.contact .contactForm form .contactForm_wrap input {
+    position: relative;
     background: none;
     height: 4rem;
     width: 100%;
@@ -301,16 +305,38 @@ header .header_mediaList{
     padding-top: 0;
 }
 
-.contact .contactForm .contactForm_wrap textarea {
+.contact .contactForm form .contactForm_wrap input:focus {
+    outline: none;
+    border-color: var(--contactFocusBorder-color);
+}
+
+.contact .contactForm form .contactForm_wrap p.error {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    font-size: 1.2rem;
+    color: var(--contactErrorText-color);
+}
+
+.contact .contactForm form .contactForm_wrap p.hide {
+    display: none;
+}
+.contact .contactForm form .contactForm_wrap textarea {
     background: none;
     border:none;
     border-bottom:.1rem solid var(--contactParagraphText-color);
     width: 100%;
     padding-left: 2.4rem;
     color: var(--contactInputText-color);
+    margin-bottom: 3rem;
 }
 
-.contact .contactForm .contactForm_wrap label {
+.contact .contactForm form .contactForm_wrap textarea:focus {
+    outline: none;
+    border-color: var(--contactFocusBorder-color);
+}
+
+.contact .contactForm form .contactForm_wrap label {
     position: absolute;
     top: 0;
     left: 2.4rem;
@@ -319,7 +345,7 @@ header .header_mediaList{
     font-size: 1.6rem;
 }
 
-.contact .contactForm .contactForm_sendBtn {
+.contact .contactForm form .contactForm_sendBtn {
     background: none;
     border: none;
     border-bottom: .2rem solid var(--contactButtonBorder-color);
