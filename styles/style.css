@@ -312,15 +312,13 @@ header .header_mediaList{
 
 .contact .contactForm form .contactForm_wrap p.error {
     position: absolute;
+    display: none;
     bottom: 1rem;
     right: 0;
     font-size: 1.2rem;
     color: var(--contactErrorText-color);
 }
 
-.contact .contactForm form .contactForm_wrap p.hide {
-    display: none;
-}
 .contact .contactForm form .contactForm_wrap textarea {
     background: none;
     border:none;
