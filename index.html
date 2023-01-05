@@ -212,14 +212,17 @@
 					<div class="contactForm_wrap">
 						<label for="text">name</label>
 						<input type="text" name="text" />
+						<p class="error">Sorry, the field can't be empty</p>
 					</div>
 					<div class="contactForm_wrap">
 						<label for="email">email</label>
 						<input type="email" name="email" />
+						<p class="error">Sorry, invalid format here</p>
 					</div>
 					<div class="contactForm_wrap">
 						<label for="message">message</label>
 						<textarea name="message" cols="35" rows="10"></textarea>
+						<p class="error">Sorry, message can't be empty</p>
 					</div>
 					<button class="contactForm_sendBtn" type="submit">
 						send message
