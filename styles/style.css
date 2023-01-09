@@ -433,4 +433,36 @@ footer a {
         top: 47rem;
         right: -6.5rem;
     }
+
+    .knowledge {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 3rem 10rem 3rem;
+        
+    }
+
+    .knowledge .knowledgeBox {
+        width: 50%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .knowledge .knowledgeBox [class^="knowledgeBox_header"] {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        margin-bottom: 1.4rem;
+    }
+    .knowledge .knowledgeBox [class^="knowledgeBox_paragraph"] {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .knowledge img {
+        bottom: 6.5rem;
+        left: 75%;
+    }
+
+    .knowledge::after {
+        display: none;
+    }
 }
