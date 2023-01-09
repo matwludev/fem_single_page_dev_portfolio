@@ -265,7 +265,7 @@ header .header_mediaList{
     content: '';
     display: block;
     width: 100%;
-    height: .1rem;
+    height: .2rem;
     background-color: var(--aboutBorder-color);
 }
 .contact .contactText {
@@ -479,4 +479,47 @@ footer a {
         width:49%;
     }
 
+    .contact {
+        padding: 6rem 16rem 0 16rem;
+    }
+
+    .contact .contactText h1{
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+    }
+
+    .contact .contactText .contactText_paragraph {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .contact img {
+        right: 80%;
+        bottom: 1rem;
+    }
+    .contact::after {
+        display: none;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 3rem;
+    }
+    footer::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: .2rem;
+        background-color: var(--aboutBorder-color);
+    }
+
+    footer .header_title {
+        margin: 2rem 0;
+    }
+
+    footer a:last-child{
+        margin-right: 0;
+    }
 }
