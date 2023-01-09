@@ -35,7 +35,7 @@ body {
 
 }
 
-header, .about, footer {
+header, .about, .about .about_text, footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,6 +60,8 @@ header .header_mediaList{
     display: flex;
     justify-content: space-between;
 }
+
+
 .about {
     position: relative;
     color: var(--aboutText-color);
@@ -85,7 +87,7 @@ header .header_mediaList{
     right: -6.5rem;
 }
 
-.about .about_titleParagraph {
+.about .about_text .about_titleParagraph {
     font-size: 4rem;
     font-weight: 700;
     line-height: 4rem;
@@ -93,30 +95,31 @@ header .header_mediaList{
     margin-bottom: 2.4rem;
 }
 
-.about .about_titleParagraph span {
+.about .about_text .about_titleParagraph span {
     position: relative;
     display: inline-block;
+    white-space: nowrap;
 }
 
-.about .about_titleParagraph span::after {
+.about .about_text .about_titleParagraph span::after {
     content: '';
     position: absolute;
     display: block;
-    right: 0;
+    left: 0;
     bottom: -.5rem;
-    width: 100%;
+    width: 95%;
     height: .5rem;
     background-color: var(--aboutTitleBorder-color);
 }
 
-.about .about_descriptionParagraph {
+.about .about_text .about_descriptionParagraph {
     font-size: 1.6rem;
     line-height: 2.6rem;
     font-weight: 300;
     text-align: center;
     margin-bottom: 2.4rem;
 }
-.contactButton, .projects .projectBox .projectBox_links a, .contact .contactForm .contactForm_sendBtn {
+.about .about_text .contactButton, .contactButton, .projects .projectBox .projectBox_links a, .contact .contactForm .contactForm_sendBtn {
     color: var(--contactButtonText-color);
     text-decoration: none;
     text-transform: uppercase;
@@ -145,7 +148,7 @@ header .header_mediaList{
     content: '';
     display: block;
     width: 100%;
-    height: .1rem;
+    height: .2rem;
     background-color: var(--aboutBorder-color);
 }
 
@@ -337,7 +340,7 @@ header .header_mediaList{
 .contact .contactForm form .contactForm_wrap label {
     position: absolute;
     top: 0;
-    left: 2.4rem;
+    left: 2.4rem; 
     color: var(--contactInputText-color);
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -366,4 +369,68 @@ footer {
 
 footer a {
     margin-right: 2.6rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        left: 0;
+        padding: 0 3rem;
+    }
+
+    header .header_mediaList {
+        justify-content: flex-end;
+    }
+
+    header .header_mediaList a {
+        margin-left: 3rem;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+    }
+    .about .about_text {
+        width: 60%;
+        padding-top: 8rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .about .about_text .about_titleParagraph, .about .about_text .about_descriptionParagraph {
+        text-align: start;
+    }
+
+    .about .about_text .about_titleParagraph {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+        margin-bottom: 6rem;
+    }
+    .about .about_text .about_descriptionParagraph {
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    .about .about_photo {
+        width: 32rem;
+        height: 60rem;
+    }
+
+    .about .about_ringsPattern {
+        top: 0rem;
+        right: 75%;
+        z-index: -1;
+    }
+    .about .about_circlePattern {
+        position: absolute;
+        top: 47rem;
+        right: -6.5rem;
+    }
 }
