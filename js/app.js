@@ -2,6 +2,12 @@ const inputs = document.querySelectorAll("input");
 const form = document.querySelector("form");
 const textArea = document.querySelector("textarea");
 const error = document.querySelectorAll(".error");
+const aboutPhoto = document.querySelector(".about img");
+const mobileWidth = window.matchMedia("(max-width: 767px)");
+const tabletWidth = window.matchMedia(
+	"(min-width: 768px) and (max-width: 1024px)"
+);
+const desktopWidth = window.matchMedia("(min-width: 1025px)");
 
 window.onload = () => {
 	form.reset();
@@ -79,3 +85,19 @@ form.addEventListener("submit", function (e) {
 		alert("Thank you for sending message!");
 	}
 });
+
+console.log(aboutPhoto);
+
+function screentChanges(e) {
+	if (mobileWidth.matches) {
+		aboutPhoto.src = "./assets/images/image-profile-mobile.webp";
+	} else if (tabletWidth.matches) {
+		aboutPhoto.src = "./assets/images/image-profile-tablet.webp";
+	} else {
+		aboutPhoto.src = "./assets/images/image-profile-desktop.webp";
+		console.log("desktop");
+	}
+}
+
+window.addEventListener("load", screentChanges);
+window.addEventListener("resize", screentChanges);
