@@ -190,7 +190,8 @@ header .header_mediaList{
 
 .projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     padding: 0 1.6rem;
 }
@@ -199,6 +200,7 @@ header .header_mediaList{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .projects .projectsHeader h1 {
@@ -210,6 +212,9 @@ header .header_mediaList{
     margin-bottom: 0;
 }
 
+.projects .projectBox {
+    width: 100%;
+}
 .projects .projectBox:last-child {
     margin-bottom: 8rem;
 }
@@ -437,8 +442,7 @@ footer a {
     .knowledge {
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 0 3rem 10rem 3rem;
-        
+        padding: 0 3rem 10rem 3rem;        
     }
 
     .knowledge .knowledgeBox {
@@ -465,4 +469,14 @@ footer a {
     .knowledge::after {
         display: none;
     }
+    
+    .projects {
+        padding: 0 3rem;
+        justify-content: space-between;
+    }
+
+    .projects .projectBox {
+        width:49%;
+    }
+
 }
