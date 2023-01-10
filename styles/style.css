@@ -1,8 +1,10 @@
 :root {
     --bg-color: hsl(0, 0%, 8%);
     --headerText-color: hsl(0, 0%, 100%);
+    --headerHoverText-color: hsl(153, 71%, 59%);
     --contactButtonText-color: hsl(0, 0%, 100%);
     --contactButtonBorder-color: hsl(153, 71%, 59%);
+    --contactButtonHoverText-color: hsl(153, 71%, 59%);
     --aboutTitleBorder-color: hsl(153, 71%, 59%);
     --aboutBorder-color:hsl(0, 0%, 100%);
     --aboutText-color:hsl(0, 0%, 100%);
@@ -521,5 +523,78 @@ footer a {
 
     footer a:last-child{
         margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    header {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        left: 0;
+        padding: 0 16.5rem;
+    }
+
+    header .header_mediaList {
+        justify-content: flex-end;
+    }
+
+    header .header_mediaList a {
+        margin-left: 3rem;
+    }
+
+    header .header_mediaList a:hover img{
+        filter: invert(63%) sepia(75%) saturate(4867%) hue-rotate(88deg) brightness(123%) contrast(123%);
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 16.5rem;
+    }
+    .about .about_text {
+        width: 60%;
+        padding-top: 8rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .about .about_text .about_titleParagraph, .about .about_text .about_descriptionParagraph {
+        text-align: start;
+    }
+
+    .about .about_text .about_titleParagraph {
+        font-size: 8.8rem;
+        line-height: 8.8rem;
+        margin-bottom: 4rem;
+    }
+    .about .about_text .about_descriptionParagraph {
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    .about .about_photo {
+        width: 44.5rem;
+        height: 72rem;
+    }
+
+    .about .about_ringsPattern {
+        top: 0rem;
+        right: 75%;
+        z-index: -1;
+    }
+
+    .about .about_circlePattern {
+        position: absolute;
+        top: 50rem;
+        right: 54.5rem;
+    }
+
+    .about .about_text .contactButton:hover {
+        color: var(--contactButtonHoverText-color);
     }
 }
