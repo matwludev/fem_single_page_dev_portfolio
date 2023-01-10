@@ -528,6 +528,9 @@ footer a {
 }
 
 @media screen and (min-width: 1025px) {
+    body {
+        overflow: hidden;
+    }
     header {
         position: relative;
         flex-direction: row;
@@ -585,7 +588,7 @@ footer a {
 
     .about .about_ringsPattern {
         top: 0rem;
-        right: 75%;
+        right: 80%;
         z-index: -1;
     }
 
@@ -772,7 +775,7 @@ footer a {
         width: 45%;
     }
     .contact img {
-        right: 75%;
+        right: 80%;
         bottom: 5rem;
     }
     .contact::after {
