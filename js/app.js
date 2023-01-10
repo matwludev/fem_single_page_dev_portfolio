@@ -86,8 +86,6 @@ form.addEventListener("submit", function (e) {
 	}
 });
 
-console.log(aboutPhoto);
-
 function screentChanges(e) {
 	if (mobileWidth.matches) {
 		aboutPhoto.src = "./assets/images/image-profile-mobile.webp";
@@ -95,7 +93,6 @@ function screentChanges(e) {
 		aboutPhoto.src = "./assets/images/image-profile-tablet.webp";
 	} else {
 		aboutPhoto.src = "./assets/images/image-profile-desktop.webp";
-		console.log("desktop");
 	}
 }
 
