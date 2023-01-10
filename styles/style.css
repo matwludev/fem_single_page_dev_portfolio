@@ -597,4 +597,35 @@ footer a {
     .about .about_text .contactButton:hover {
         color: var(--contactButtonHoverText-color);
     }
+
+    .knowledge {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 16.5rem 10rem 16.5rem;        
+    }
+
+    .knowledge .knowledgeBox {
+        width: 33%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .knowledge .knowledgeBox [class^="knowledgeBox_header"] {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        margin-bottom: 1.4rem;
+    }
+    .knowledge .knowledgeBox [class^="knowledgeBox_paragraph"] {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .knowledge img {
+        bottom: 6.5rem;
+        left: 80%;
+    }
+
+    .knowledge::after {
+        display: none;
+    }
 }
