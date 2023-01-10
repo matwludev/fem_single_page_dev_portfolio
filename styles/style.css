@@ -221,8 +221,9 @@ header .header_mediaList{
     margin-bottom: 8rem;
 }
 .projects .projectBox img {
-    display: inline-block;
+    display: block;
     width: 100%;
+    height: auto;
     object-fit: contain;
     margin: 4rem auto;
 }
@@ -605,7 +606,7 @@ footer a {
     }
 
     .knowledge .knowledgeBox {
-        width: 33%;
+        width: 30%;
         justify-content: flex-start;
         align-items: flex-start;
     }
@@ -628,4 +629,121 @@ footer a {
     .knowledge::after {
         display: none;
     }
+
+    .projects {
+        padding: 0 16.5rem;
+        justify-content: space-between;
+    }
+    
+    .contactButton:hover {
+        color: var(--contactButtonHoverText-color);
+    }
+
+    .projects .projectBox {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width:49%;
+    }
+    .projects .projectBox p {
+        order: 2;
+    }
+    .projects .projectBox .projectBox_tech{
+        order: 3;
+    }
+    .projects .projectBox img {
+        display: none;
+    }
+    .projects .projectBox .projectBox_links {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 54rem;
+        order: 1;
+        background-image: url(../assets/images/thumbnail-project-1-large.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .projects .projectBox .projectBox_links:hover {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ), url(../assets/images/thumbnail-project-1-large.webp);
+          background-size: cover;
+    }
+    .projects .projectBox:nth-child(3) .projectBox_links {
+        background-image: url(../assets/images/thumbnail-project-2-large.webp);
+    }
+
+    .projects .projectBox:nth-child(3) .projectBox_links:hover {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ), url(../assets/images/thumbnail-project-2-large.webp);
+          background-size: cover;
+    }
+    .projects .projectBox:nth-child(4) .projectBox_links {
+        background-image: url(../assets/images/thumbnail-project-3-large.webp);
+    }
+
+    .projects .projectBox:nth-child(4) .projectBox_links:hover {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ), url(../assets/images/thumbnail-project-3-large.webp);
+          background-size: cover;
+    }
+
+    .projects .projectBox:nth-child(5) .projectBox_links {
+        background-image: url(../assets/images/thumbnail-project-4-large.webp);
+    }
+
+    .projects .projectBox:nth-child(5) .projectBox_links:hover {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ), url(../assets/images/thumbnail-project-4-large.webp);
+          background-size: cover;
+    }
+    .projects .projectBox:nth-child(6) .projectBox_links {
+        background-image: url(../assets/images/thumbnail-project-5-large.webp);
+    }
+
+    .projects .projectBox:nth-child(6) .projectBox_links:hover {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ), url(../assets/images/thumbnail-project-5-large.webp);
+          background-size: cover;
+    }
+    .projects .projectBox:nth-child(7) .projectBox_links {
+        background-image: url(../assets/images/thumbnail-project-6-large.webp);
+    }
+
+    .projects .projectBox:nth-child(7) .projectBox_links:hover {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ), url(../assets/images/thumbnail-project-6-large.webp);
+          background-size: cover;
+    }
+
+    .projects .projectBox .projectBox_links a{
+        display: none;
+        margin: 0;
+    }
+    .projects .projectBox .projectBox_links a:first-of-type{
+        margin-bottom: 6rem;
+    }
+    .projects .projectBox .projectBox_links:hover a {
+        display: flex;
+    }
+    .projects .projectBox .projectBox_links a:hover {
+        color:var(--contactButtonHoverText-color); 
+    }
+
 }
