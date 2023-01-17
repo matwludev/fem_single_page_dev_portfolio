@@ -28,6 +28,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
+    list-style: none;
 }
 
 body {
@@ -44,11 +45,12 @@ header, .about, .about .about_text, footer {
     align-items: center;
 }
 
-header{
+header, footer{
     position: absolute;
     width: 17rem;
     left: calc(50% - 8.5rem);
     color: var(--headerText-color);
+    z-index: 1;
 }
 
 header .header_title, footer .header_title {
@@ -57,12 +59,11 @@ header .header_title, footer .header_title {
     margin: 2rem auto;
 }
 
-header .header_mediaList{
+header .header_mediaList, footer .header_mediaList{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-
 
 .about {
     position: relative;
@@ -369,10 +370,21 @@ header .header_mediaList{
 
 footer {
     position: relative;
-    background-color: var(--footertBg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    left: 0;
+    background-color: var(--footertBg-color);
     color: var(--footerText-color);
     padding: 2rem 0 4rem 0;
+}
+footer .header_mediaList {
+    width: 17rem;
+}
+
+footer .header_mediaList li:last-child a{
+    margin-right: 0;
 }
 
 footer a {
@@ -380,7 +392,7 @@ footer a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    header {
+    header, footer {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
@@ -531,7 +543,7 @@ footer a {
     body {
         overflow-x: hidden;
     }
-    header {
+    header, footer {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
